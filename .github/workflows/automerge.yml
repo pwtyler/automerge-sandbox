@@ -1,0 +1,15 @@
+name: Automerge
+on:
+    push:
+      branches:
+        - default
+
+permissions:
+  contents: write
+
+jobs:
+  automerge:
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v4
+        - uses: pantheon-systems/upstream-update-build@action
